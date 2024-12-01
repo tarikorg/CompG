@@ -1,0 +1,21 @@
+{
+  "name": "compg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./electron/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run dev:client\" \"npm run dev:electron\"",
+    "dev:server": "node backend/server.js",
+    "dev:client": "npm --prefix ./frontend run dev",
+    "dev:electron": "npm --prefix ./electron run dev",
+    "build": "npm run build:client && npm run build:electron",
+    "build:client": "vite build",
+    "build:electron": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
