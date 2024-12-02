@@ -4,8 +4,8 @@
   "description": "",
   "main": "./electron/main.js",
   "scripts": {
-    "start": "concurrently \"npm run dev:client\" \"npm run dev:electron\"",
-    "dev:server": "node backend/server.js",
+    "start": "concurrently \"npm run dev:client\" \"npm run dev:electron\" \"npm run dev:server \"",
+    "dev:server": "npm --prefix ./backend start",
     "dev:client": "npm --prefix ./frontend run dev",
     "dev:electron": "npm --prefix ./electron run dev",
     "build": "npm run build:client && npm run build:electron",
