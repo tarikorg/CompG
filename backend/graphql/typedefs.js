@@ -3,21 +3,22 @@ const gql = String.raw;
 
 const typeDefs = gql`
   type Synergy {
-  top: [String!]
-  jungle: [String!]
-  mid: [String!]
-  adc: [String!]
-  support: [String!]
+  top: [String]
+  jungle: [String]
+  mid: [String]
+  adc: [String]
+  support: [String]
 }
 
 type Champion {
   id: ID!
   icon: String!
   title: String!
-  lane: String!
-  counter: [String!]
-  scale: [Int!]
-  synergy: Synergy!
+  lane: String
+  counter: [String]
+  scale: [Int]
+  synergy: Synergy
+  name: String!
 }
 
 type Query {
